@@ -411,8 +411,12 @@ var tarteaucitron = {
                         // Append the wrapper to the body
                         document.body.appendChild(wrapper);*/
 
-                        div.id = 'tarteaucitronRoot';
-                        body.appendChild(div, body);
+						if(document.getElementById('tarteaucitronRoot')){
+							div = document.getElementById('tarteaucitronRoot');
+						}else{
+							div.id = 'tarteaucitronRoot';
+							body.appendChild(div, body);
+						}
                         div.innerHTML = html;
 
                         if (tarteaucitron.job !== undefined) {
